@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodImages" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jjg-xz-gP0">
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="300" id="e4U-sR-7C0" customClass="TableViewCell" customModule="FoodImages" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e4U-sR-7C0" id="ZpK-rA-rdY">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food1" translatesAutoresizingMaskIntoConstraints="NO" id="fQQ-aI-nXE">
+                                                    <rect key="frame" x="5" y="5" width="418" height="255"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="food1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foo-dB-QIY">
+                                                    <rect key="frame" x="5" y="265" width="418" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="yVD-k6-luN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fQQ-aI-nXE" firstAttribute="leading" secondItem="ZpK-rA-rdY" secondAttribute="leading" constant="5" id="J3v-EV-Idy"/>
+                                                <constraint firstAttribute="trailing" secondItem="foo-dB-QIY" secondAttribute="trailing" constant="5" id="KB9-Gw-hlN"/>
+                                                <constraint firstItem="foo-dB-QIY" firstAttribute="leading" secondItem="ZpK-rA-rdY" secondAttribute="leading" constant="5" id="UKW-cz-85k"/>
+                                                <constraint firstAttribute="trailing" secondItem="fQQ-aI-nXE" secondAttribute="trailing" constant="5" id="dP8-kb-Zn4"/>
+                                                <constraint firstItem="fQQ-aI-nXE" firstAttribute="top" secondItem="ZpK-rA-rdY" secondAttribute="top" constant="5" id="jb2-1K-SMn"/>
+                                                <constraint firstItem="foo-dB-QIY" firstAttribute="top" secondItem="fQQ-aI-nXE" secondAttribute="bottom" constant="5" id="kMe-ta-gxd"/>
+                                                <constraint firstItem="fQQ-aI-nXE" firstAttribute="top" secondItem="ZpK-rA-rdY" secondAttribute="top" constant="5" id="mX3-KB-EIL"/>
+                                                <constraint firstAttribute="bottom" secondItem="foo-dB-QIY" secondAttribute="bottom" constant="5" id="sOv-Gf-xSe"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgViewCell" destination="fQQ-aI-nXE" id="XYH-l9-6zY"/>
+                                            <outlet property="lblCell" destination="foo-dB-QIY" id="ByW-ZK-FKq"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jjg-xz-gP0" secondAttribute="bottom" id="HmM-QW-7y5"/>
+                            <constraint firstItem="jjg-xz-gP0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S9I-er-gJS"/>
+                            <constraint firstItem="jjg-xz-gP0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Skf-g5-h5k"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jjg-xz-gP0" secondAttribute="trailing" id="slL-b5-UB5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tblView" destination="jjg-xz-gP0" id="iaZ-Yg-1Bc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.22429906542056" y="83.585313174946009"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="food1" width="160" height="109.66666412353516"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
